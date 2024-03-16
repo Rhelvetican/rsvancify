@@ -9,3 +9,17 @@ edition = "2021"
 [dependencies]
 ratatui = { version = "*", features = ["serde"] }
 crossterm = "*"
+
+[profile.release]
+lto = "fat"
+strip = "symbols"
+codegen-units = 1
+opt-level = 3
+debug = false
+
+[profile.dev]
+lto = "off"
+strip = "none"
+codegen-units = 16
+opt-level = 0
+debug = true
