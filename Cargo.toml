@@ -8,7 +8,9 @@ edition = "2021"
 
 [dependencies]
 ratatui = { version = "*", features = ["serde"] }
-crossterm = "*"
+crossterm = { version = "*", features = ["serde"] }
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
 
 [profile.release]
 lto = "fat"
