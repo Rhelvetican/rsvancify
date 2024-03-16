@@ -55,7 +55,11 @@ impl App {
         self.counter += 1;
     }
     fn decrement1(&mut self) {
-        self.counter -= 1;
+        if self.counter > 0 {
+            self.counter -= 1;
+        } else {
+            self.counter = u128::MAX;
+        }
     }
     fn exit(&mut self) {
         self.exit = true;
