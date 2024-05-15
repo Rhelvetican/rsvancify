@@ -3,18 +3,19 @@ name = "rsvancify"
 readme = "README.md"
 license = "LICENSE.txt"
 authors = ["Rhelv <bionicvnb@gmail.com>"]
-version = "0.0.1" # Not working yet, 0.1 is to get it to work
+version = "0.0.1"                         # Not working yet, 0.1 is to get it to work
 edition = "2021"
 
 [dependencies]
 ratatui = { version = "*", features = ["serde"] }
 crossterm = { version = "*", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
-serde_json = {version = "1", features = ["preserve_order"] }
-reqwest = { version = "0.11", features = ["json"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+reqwest = { version = "0.12", features = ["json"] }
 
 [profile.release]
 lto = "fat"
+rpath = true
 strip = "symbols"
 codegen-units = 1
 opt-level = 3
