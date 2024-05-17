@@ -5,6 +5,7 @@ use ratatui::{
     widgets::{block::*, *},
 };
 use std::io;
+mod error;
 mod tui;
 mod utils;
 

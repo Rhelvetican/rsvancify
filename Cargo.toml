@@ -8,6 +8,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1"
+thiserror = "1"
 ratatui = { version = "0.26", features = ["serde"] }
 crossterm = { version = "0.27", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
