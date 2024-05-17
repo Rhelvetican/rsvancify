@@ -1,19 +1,8 @@
 use serde_json::{from_slice, json, Value};
-use std::{
-    fs::{read, DirBuilder},
-    path::PathBuf,
-};
+use std::{fs::read, path::Path};
 
-pub fn read_json(path: &str) -> Value {
-    let val = match read(path) {
-        Ok(file) => file,
-        Err(_) => {
-            let dir = PathBuf::from(path);
-            let dir = dir.parent().unwrap();
-            DirBuilder::new().recursive(true).create(dir).unwrap();
-            return json!({});
-        }
-    };
+pub fn read_json<T: AsRef<Path>>(path: T) -> Value {
+    let val = read(path).unwrap_or_default();
     match from_slice(&val) {
         Ok(value) => value,
         Err(_) => json!({}),

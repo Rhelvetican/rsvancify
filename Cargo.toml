@@ -7,8 +7,9 @@ version = "0.0.1"                         # Not working yet, 0.1 is to get it to
 edition = "2021"
 
 [dependencies]
-ratatui = { version = "*", features = ["serde"] }
-crossterm = { version = "*", features = ["serde"] }
+anyhow = "1"
+ratatui = { version = "0.26", features = ["serde"] }
+crossterm = { version = "0.27", features = ["serde"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
 reqwest = { version = "0.12", features = ["json"] }
