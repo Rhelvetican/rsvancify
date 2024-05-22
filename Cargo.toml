@@ -7,6 +7,7 @@ version = "0.0.1"                         # Not working yet, 0.1 is to get it to
 edition = "2021"
 
 [dependencies]
+coreutils = { version = "0", features = ["feat_os_windows"] }
 anyhow = "1"
 thiserror = "1"
 ratatui = { version = "0.26", features = ["serde"] }
