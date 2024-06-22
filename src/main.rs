@@ -7,7 +7,6 @@ use ratatui::{
 use std::io;
 mod error;
 mod tui;
-mod utils;
 
 fn main() -> io::Result<()> {
     let mut tui = tui::init()?;

@@ -1,9 +1,11 @@
 [package]
 name = "rsvancify"
 readme = "README.md"
-license = "LICENSE.txt"
+license = "MIT"
 authors = ["Rhelv <bionicvnb@gmail.com>"]
-version = "0.0.1"                         # Not working yet, 0.1 is to get it to work
+homepage = "https://github.com/Rhelvetican/rsvancify"
+repository = "https://github.com/Rhelvetican/rsvancify"
+version = "0.0.1"                                       # Not working yet, 0.1 is to get it to work
 edition = "2021"
 
 [dependencies]
